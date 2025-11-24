@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -67,9 +68,11 @@ export default function RootLayout({
           disableTransitionOnChange={false}
         >
           <Header />
-          <main className="min-h-screen pt-20">
-            {children}
-          </main>
+          <ErrorBoundary>
+            <main className="min-h-screen pt-20">
+              {children}
+            </main>
+          </ErrorBoundary>
           <Footer />
         </ThemeProvider>
       </body>

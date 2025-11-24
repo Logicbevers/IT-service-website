@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
@@ -15,7 +15,7 @@ import {
     DevOpsIcon
 } from '@/components/ui/AnimatedIcons';
 
-const animatedIcons: Record<string, React.ComponentType<any>> = {
+const animatedIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     Cloud: CloudMigrationIcon,
     Shield: CybersecurityIcon,
     Code: CustomSoftwareIcon,
@@ -33,7 +33,7 @@ interface ServiceCardProps {
     href?: string;
 }
 
-export function ServiceCard({ title, description, iconName, slug, index, href }: ServiceCardProps) {
+const ServiceCardComponent = ({ title, description, iconName, slug, index, href }: ServiceCardProps) => {
     const AnimatedIcon = animatedIcons[iconName] || CustomSoftwareIcon;
     const linkHref = href || `/services/${slug}`;
 
@@ -98,4 +98,7 @@ export function ServiceCard({ title, description, iconName, slug, index, href }:
             </Card>
         </motion.div>
     );
-}
+};
+
+export const ServiceCard = memo(ServiceCardComponent);
+ServiceCard.displayName = 'ServiceCard';

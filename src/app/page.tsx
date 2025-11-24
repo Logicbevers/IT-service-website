@@ -157,7 +157,7 @@ export default async function Home() {
             <div className="relative z-10">
               <Heading level={2} className="mb-6 text-[#242424] text-4xl md:text-5xl">Ready to Scale?</Heading>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-                Let's discuss how we can engineer your digital future.
+                Let&apos;s discuss how we can engineer your digital future.
               </p>
               <Link href="/contact" className={buttonVariants({ size: 'lg', className: 'bg-accent hover:bg-accent-dark text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all px-12 py-7 text-lg font-semibold rounded-full' })}>
                 Start Your Project <ArrowRight className="ml-2 h-5 w-5" />

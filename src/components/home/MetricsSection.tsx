@@ -114,7 +114,7 @@ export function MetricsSection() {
                     </div>
                     <div>
                         <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
-                            We don't just build software; we engineer outcomes. Our track record speaks to our commitment to precision, speed, and tangible business growth.
+                            We don&apos;t just build software; we engineer outcomes. Our track record speaks to our commitment to precision, speed, and tangible business growth.
                         </p>
                     </div>
                 </div>
