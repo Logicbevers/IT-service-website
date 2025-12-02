@@ -213,6 +213,36 @@
     }
   }
 
+  @keyframes shine {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  @keyframes slide {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 60px 60px;
+    }
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out forwards;
   }
@@ -239,6 +269,20 @@
 
   .animate-scroll-indicator {
     animation: scroll-indicator 2s ease-in-out infinite;
+  }
+
+  .animate-shine {
+    animation: shine 3s linear infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+
+  .btn-shine {
+    background: linear-gradient(110deg, #F6A400 45%, #FFD080 50%, #F6A400 55%);
+    background-size: 200% 100%;
+    animation: shine 5s linear infinite;
   }
 
   /* Staggered Delays */
