@@ -2,6 +2,7 @@ import { HomeBanner } from '@/components/home/HomeBanner';
 import { LogoMarquee } from '@/components/home/LogoMarquee';
 import { ValueProposition } from '@/components/home/ValueProposition';
 import { MissionVisionSection } from '@/components/home/MissionVisionSection';
+import { ConversionCTA } from '@/components/home/ConversionCTA';
 import { MetricsSection } from '@/components/home/MetricsSection';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
@@ -281,6 +282,8 @@ export default async function Home() {
           </div>
         </div>
       </Section>
+
+      <ConversionCTA />
 
       <FloatingCTA />
     </div>
