@@ -17,6 +17,18 @@ import { Button, buttonVariants } from '@/components/ui/Button';
 import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Service, CaseStudy, Testimonial } from '@/types';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'NRT Groups - Building the Future of Business & Innovation',
+  description: 'Empowering organizations with integrated solutions in technology, logistics, digital transformation, and skill development. 500+ projects delivered, 50+ global clients, 15+ years of excellence.',
+  keywords: ['IT solutions', 'logistics', 'digital transformation', 'software development', 'training', 'enterprise solutions', 'NRT Groups'],
+  openGraph: {
+    title: 'NRT Groups - Building the Future of Business & Innovation',
+    description: 'Empowering organizations with integrated solutions in technology, logistics, digital transformation, and skill development.',
+    type: 'website',
+  },
+};
 
 // Fallback data in case CMS is not connected
 import seedData from '@/sanity/seed-content.json';
