@@ -19,78 +19,64 @@ export function LogoMarquee() {
     const duplicatedClients = [...clients, ...clients];
 
     return (
-        <section className="relative bg-white py-16 overflow-hidden border-y border-gray-100">
-            <div className="container mx-auto px-4 md:px-6">
+        <section className="relative py-24 overflow-hidden">
+            {/* Background - NRT Orange Theme Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#F6A400] to-[#E98000]" />
+
+            {/* Subtle Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')] bg-repeat" />
+
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 {/* Section Heading */}
-                <div className="text-center mb-12">
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-2">
-                        Trusted by Industry Leaders Worldwide
+                <div className="text-center mb-16">
+                    <div className="inline-block mb-4">
+                        <span className="px-4 py-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-xs font-bold uppercase tracking-wider text-white">
+                            TRUSTED WORLDWIDE
+                        </span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        Trusted by Industry Leaders <span className="text-white/90">Worldwide</span>
                     </h2>
-                    <p className="text-[#3F3F3F]">
+                    <p className="text-lg text-white/80 max-w-2xl mx-auto">
                         Partnering with organizations across the globe
                     </p>
                 </div>
 
                 {/* Infinite Scroll Container */}
-                <div className="relative">
+                <div className="relative max-w-[100vw] -mx-4 md:-mx-6 lg:mx-0">
                     {/* Gradient Fade Edges */}
-                    <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                    <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+                    <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#F6A400] to-transparent z-20 pointer-events-none" />
+                    <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#E98000] to-transparent z-20 pointer-events-none" />
 
                     {/* Scrolling Logos */}
-                    <div className="flex overflow-hidden">
+                    <div className="flex overflow-hidden py-4">
                         <motion.div
-                            className="flex gap-16 items-center"
+                            className="flex gap-8 items-center"
                             animate={{
-                                x: [0, -50 * clients.length],
+                                x: [0, -50 * clients.length * 4], // Adjusted for card width + gap
                             }}
                             transition={{
                                 x: {
                                     repeat: Infinity,
                                     repeatType: "loop",
-                                    duration: 30,
+                                    duration: 40,
                                     ease: "linear",
                                 },
                             }}
+                            whileHover={{ animationPlayState: 'paused' }}
                         >
                             {duplicatedClients.map((client, index) => (
                                 <div
                                     key={`${client.name}-${index}`}
-                                    className="flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer"
-                                    style={{ width: `${client.width}px` }}
+                                    className="group relative flex-shrink-0 w-[280px] h-[100px] rounded-2xl p-8 flex items-center justify-center transition-all duration-400 cursor-pointer backdrop-blur-md bg-white/5 border border-[#F6A400]/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:scale-105 hover:-translate-y-1 hover:border-white hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                                 >
-                                    {/* Placeholder logo - replace with actual logo images */}
-                                    <div className="h-12 bg-gradient-to-r from-gray-300 to-gray-400 rounded flex items-center justify-center">
-                                        <span className="text-xs font-bold text-white text-center px-2">
-                                            {client.name}
-                                        </span>
-                                    </div>
+                                    {/* Logo Text/Image */}
+                                    <span className="text-xl font-bold text-white/60 group-hover:text-white transition-colors duration-300">
+                                        {client.name}
+                                    </span>
                                 </div>
                             ))}
                         </motion.div>
-                    </div>
-                </div>
-
-                {/* Trust Metrics */}
-                <div className="mt-12 flex flex-wrap justify-center gap-8 text-center">
-                    <div>
-                        <div className="text-3xl font-bold text-[#F6A400]">500+</div>
-                        <div className="text-sm text-[#3F3F3F]">Projects Delivered</div>
-                    </div>
-                    <div className="hidden sm:block w-px bg-gray-200" />
-                    <div>
-                        <div className="text-3xl font-bold text-[#F6A400]">50+</div>
-                        <div className="text-sm text-[#3F3F3F]">Global Clients</div>
-                    </div>
-                    <div className="hidden sm:block w-px bg-gray-200" />
-                    <div>
-                        <div className="text-3xl font-bold text-[#F6A400]">98%</div>
-                        <div className="text-sm text-[#3F3F3F]">Satisfaction Rate</div>
-                    </div>
-                    <div className="hidden sm:block w-px bg-gray-200" />
-                    <div>
-                        <div className="text-3xl font-bold text-[#F6A400]">15+</div>
-                        <div className="text-sm text-[#3F3F3F]">Years Experience</div>
                     </div>
                 </div>
             </div>
