@@ -1,11 +1,11 @@
 import { HomeBanner } from '@/components/home/HomeBanner';
+import { LogoMarquee } from '@/components/home/LogoMarquee';
 import { MetricsSection } from '@/components/home/MetricsSection';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
 import { ServiceCard } from '@/components/shared/ServiceCard';
 import { CaseStudyCard } from '@/components/shared/CaseStudyCard';
 import { TestimonialCarousel } from '@/components/shared/TestimonialCarousel';
-import { LogoCarousel } from '@/components/shared/LogoCarousel';
 import { FloatingCTA } from '@/components/shared/FloatingCTA';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { client, servicesQuery, caseStudiesQuery, testimonialsQuery } from '@/lib/sanity';
@@ -40,7 +40,7 @@ export default async function Home() {
     <div className="flex flex-col gap-0 relative">
       <HomeBanner />
 
-      <LogoCarousel />
+      <LogoMarquee />
 
       {/* About Section */}
       <Section className="relative bg-white overflow-hidden pt-32 pb-32" animate>
