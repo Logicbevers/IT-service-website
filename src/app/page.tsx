@@ -94,43 +94,6 @@ export default async function Home() {
       </div>
 
 
-      {/* Case Studies Preview (White) */}
-      <Section className="relative bg-white overflow-hidden pt-32 pb-32" animate>
-        <div className="relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <span className="w-8 h-1 bg-accent rounded-full"></span>
-                <span className="text-sm text-accent font-bold uppercase tracking-wider">Success Stories</span>
-              </div>
-              <Heading level={2} className="mb-6 text-4xl md:text-5xl text-[#242424]">Impact in Action</Heading>
-              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-                Real results for forward-thinking organizations.
-              </p>
-            </div>
-            <Link href="/case-studies" className={buttonVariants({ variant: 'outline', size: 'lg', className: 'mt-6 md:mt-0 border-accent text-accent hover:bg-accent hover:text-white' })}>
-              View All Case Studies
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            {caseStudies.slice(0, 2).map((study: CaseStudy, index: number) => (
-              <CaseStudyCard
-                key={study._id || index}
-                index={index}
-                title={study.title}
-                client={study.client}
-                summary={study.summary}
-                image={study.mainImage}
-                slug={study.slug.current}
-                tags={study.tags || []}
-              />
-            ))}
-          </div>
-        </div>
-      </Section>
-
       {/* Trust / Testimonials (Dark Anchor) */}
       <Section className="relative bg-[#23272F] text-white overflow-hidden pt-32 pb-32" animate>
         <SectionDivider type="curve" position="top" fill="#FFFFFF" />
