@@ -54,14 +54,26 @@ export function HomeBanner() {
 
     return (
         <section
-            className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#F9FAFB]"
+            className="relative min-h-[90vh] flex items-center overflow-hidden"
             onMouseMove={handleMouseMove}
         >
+            {/* Premium Diagonal Gradient Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#FFEED4] via-[#F6A40033] to-[#FFF7EC]" />
+
+            {/* Warm Center Glow */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(246,164,0,0.12)_0%,transparent_60%)]" />
+
             {/* Background Elements */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
-                <motion.div style={transform3} className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
-                <motion.div style={transform3} className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-3xl" />
+                {/* Gentle Curved Waves */}
+                <div className="absolute inset-0 opacity-[0.06]">
+                    <svg className="absolute bottom-0 left-0 w-full h-64" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                        <path fill="#F6A400" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    </svg>
+                </div>
+
+                <motion.div style={transform3} className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#F6A400]/15 rounded-full blur-3xl" />
+                <motion.div style={transform3} className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#FFEED4]/20 rounded-full blur-3xl" />
             </div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10 pt-20 pb-16">
@@ -74,18 +86,18 @@ export function HomeBanner() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#E8E6E1] mb-8 shadow-sm"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FFF4E4] border border-[#F6A400]/20 mb-8 shadow-[0_0_15px_rgba(246,164,0,0.1)]"
                         >
                             <span className="flex h-2 w-2 relative">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E98000] opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E98000]"></span>
                             </span>
-                            <span className="text-xs font-bold text-accent tracking-wide uppercase">Innovation Partner</span>
+                            <span className="text-sm font-semibold text-[#E98000] tracking-wide uppercase">Innovation Partner</span>
                         </motion.div>
 
                         {/* Stacked Headline with Typewriter/Reveal */}
                         <motion.h1
-                            className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-[#242424] leading-[1.1]"
+                            className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-[#1A1A1A] leading-[1.1]"
                             variants={sentence}
                             initial="hidden"
                             animate="visible"
@@ -104,7 +116,7 @@ export function HomeBanner() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.8 }}
-                            className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg"
+                            className="text-xl text-[#3F3F3F] mb-8 leading-relaxed max-w-lg"
                         >
                             Be at the helm of digital transformation. We engineer scalable solutions that drive growth and efficiency.
                         </motion.p>

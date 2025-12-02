@@ -54,6 +54,7 @@ export interface CaseStudy {
     challenge?: string;
     solution?: string;
     results?: string[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     gallery?: any;
 }
 
@@ -70,6 +71,7 @@ export interface BlogPost {
         image: string; // URL string from query
         role?: string;
     };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     body?: any;
 }
 

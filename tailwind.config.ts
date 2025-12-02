@@ -11,31 +11,40 @@ const config: Config = {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: 'var(--primary)',
-                    light: 'var(--primary-light)',
-                    dark: 'var(--primary-dark)',
+                    DEFAULT: '#F6A400', // Primary Orange
+                    light: '#FCD9A0',   // Light Gold/Peach
+                    dark: '#E98000',    // Deep Amber
+                    foreground: '#1E1E1E',
                 },
                 accent: {
-                    DEFAULT: 'var(--accent)',
-                    light: 'var(--accent-light)',
-                    dark: 'var(--accent-dark)',
+                    DEFAULT: '#F6A400',
+                    hover: '#FFBA27',   // Hover Orange
+                    pressed: '#D86E00', // Pressed Orange
+                    light: '#FFEBD2',   // Soft Peach
+                    foreground: '#1E1E1E',
+                },
+                neutral: {
+                    dark: '#1E1E1E',    // Text Dark
+                    grey: '#4A4A4A',    // Text Grey
+                    light: '#FAFAFA',   // Light Background
+                    border: '#E6E6E6',  // Border Light
                 },
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
                 card: {
-                    DEFAULT: 'var(--card)',
-                    foreground: 'var(--card-foreground)',
+                    DEFAULT: '#FFFFFF',
+                    foreground: '#1E1E1E',
                 },
                 popover: {
                     DEFAULT: 'var(--popover)',
                     foreground: 'var(--popover-foreground)',
                 },
                 muted: {
-                    DEFAULT: 'var(--muted)',
-                    foreground: 'var(--muted-foreground)',
+                    DEFAULT: '#FAFAFA',
+                    foreground: '#4A4A4A',
                 },
-                input: 'var(--input)',
-                ring: 'var(--ring)',
+                input: '#E6E6E6',
+                ring: '#F6A400',
             },
             borderRadius: {
                 lg: 'var(--radius)',

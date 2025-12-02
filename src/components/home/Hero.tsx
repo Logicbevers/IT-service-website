@@ -50,7 +50,7 @@ export function Hero() {
                             transition={{ delay: 0.6, duration: 0.8 }}
                         >
                             <Link href="/contact" className={buttonVariants({ size: 'lg' })}>
-                                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                             <Link href="/services" className={buttonVariants({ size: 'lg', variant: 'outline' })}>
                                 Our Services

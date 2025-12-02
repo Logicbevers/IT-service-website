@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
+import { PageBanner } from '@/components/shared/PageBanner';
 import { BlogCard } from '@/components/shared/BlogCard';
 import { Sparkles } from 'lucide-react';
 
@@ -35,36 +36,11 @@ export function InsightsClient({ posts }: InsightsClientProps) {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <Section className="bg-gradient-soft py-20 relative overflow-hidden">
-                {/* Decorative Background */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-accent opacity-10 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-accent opacity-10 rounded-full blur-3xl" />
-
-                <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-accent/20 mb-6"
-                    >
-                        <Sparkles className="w-4 h-4 text-accent" />
-                        <span className="text-sm text-accent font-semibold">Latest Insights</span>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        <Heading level={1} className="mb-6 text-4xl md:text-5xl">
-                            Insights & News
-                        </Heading>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
-                            Stay ahead of the curve with our latest thoughts on technology, business, and innovation.
-                        </p>
-                    </motion.div>
-                </div>
-            </Section>
+            <PageBanner
+                category="Latest Insights"
+                title="Insights & News"
+                subtitle="Stay ahead of the curve with our latest thoughts on technology, business, and innovation."
+            />
 
             {/* Topic Filters */}
             <Section className="py-8 border-b border-border">
@@ -77,8 +53,8 @@ export function InsightsClient({ posts }: InsightsClientProps) {
                             transition={{ delay: i * 0.05 }}
                             onClick={() => setSelectedCategory(category)}
                             className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${selectedCategory === category
-                                    ? 'bg-gradient-accent text-white shadow-medium'
-                                    : 'glass-effect border border-accent/30 text-foreground hover:border-accent/50 hover:bg-accent/10'
+                                ? 'bg-gradient-accent text-white shadow-medium'
+                                : 'glass-effect border border-accent/30 text-foreground hover:border-accent/50 hover:bg-accent/10'
                                 }`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

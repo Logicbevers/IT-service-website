@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
+import { PageBanner } from '@/components/shared/PageBanner';
 import { ContactForm } from '@/components/shared/ContactForm';
 import { Mail, Phone, MapPin, Clock, Sparkles } from 'lucide-react';
 
@@ -12,22 +13,11 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <div className="min-h-screen">
-            <Section className="relative bg-gradient-soft py-24 overflow-hidden" animate>
-                {/* Decorative Background */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-
-                <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-accent/20 mb-6">
-                        <Sparkles className="w-4 h-4 text-accent" />
-                        <span className="text-sm text-accent font-semibold">Get in Touch</span>
-                    </div>
-                    <Heading level={1} className="mb-6 text-4xl md:text-5xl">Contact Us</Heading>
-                    <p className="text-xl text-muted-foreground leading-relaxed">
-                        Have a project in mind? We'd love to hear from you.
-                    </p>
-                </div>
-            </Section>
+            <PageBanner
+                category="Get in Touch"
+                title="Contact Us"
+                subtitle="Have a project in mind? We'd love to hear from you."
+            />
 
             <Section animate>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

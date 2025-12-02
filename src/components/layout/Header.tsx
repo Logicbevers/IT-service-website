@@ -2,120 +2,245 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
 import { Button, buttonVariants } from '@/components/ui/Button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'About', href: '/about' },
-    { name: 'Insights', href: '/insights' },
-    { name: 'Careers', href: '/careers' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Contact', href: '/contact' },
+];
+
+const serviceDropdownItems = [
+    { name: 'Logistics & Supply Chain', href: '/services/logistics' },
+    { name: 'Software Development', href: '/services/software-development' },
+    { name: 'Digital Marketing', href: '/services/digital-marketing' },
+    { name: 'Training & Development', href: '/services/training' },
+    { name: 'Customer-First Approach', href: '/services/customer-first' },
 ];
 
 export function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+    const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const pathname = usePathname();
+    const { theme, resolvedTheme } = useTheme();
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
+            setIsScrolled(window.scrollY > 10);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     useEffect(() => {
-        setIsOpen(false);
+        setMobileMenuOpen(false);
+        setMobileServicesOpen(false);
     }, [pathname]);
+
+    // Determine which logo to show based on theme
+    const logoSrc = mounted && (resolvedTheme === 'dark' || theme === 'dark')
+        ? '/logo-light.png'
+        : '/logo-dark.png';
 
     return (
         <header
             className={cn(
                 'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-                scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+                isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border shadow-sm py-3' : 'bg-transparent py-5'
             )}
         >
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="flex h-20 items-center justify-between">
-                    <Link href="/" className="text-2xl font-bold tracking-tighter text-primary">
-                        Premium<span className="text-accent">IT</span>
-                    </Link>
+            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+                {/* Logo */}
+                <Link href="/" className="flex items-center gap-2 z-50 relative h-10">
+                    {mounted ? (
+                        <Image
+                            src={logoSrc}
+                            alt="NRT Groups Logo"
+                            width={140}
+                            height={40}
+                            className="h-10 w-auto object-contain"
+                            priority
+                        />
+                    ) : (
+                        <div className="h-10 w-[140px]" /> // Placeholder to prevent layout shift
+                    )}
+                </Link>
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center space-x-6">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={cn(
-                                    'text-sm font-medium transition-colors hover:text-accent relative group',
-                                    pathname === item.href ? 'text-accent' : 'text-muted-foreground'
-                                )}
-                            >
-                                {item.name}
-                                <span className={cn(
-                                    "absolute -bottom-1 left-0 w-full h-0.5 bg-accent transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100",
-                                    pathname === item.href && "scale-x-100"
-                                )} />
-                            </Link>
-                        ))}
-                        <ThemeToggle />
-                        <Link href="/contact" className={buttonVariants({ size: 'sm' })}>
-                            Get Started
-                        </Link>
-                    </nav>
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center gap-8">
+                    {navItems.map((item) => (
+                        <div key={item.name} className="relative group">
+                            {item.hasDropdown ? (
+                                <div
+                                    className="relative"
+                                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                                >
+                                    <button
+                                        className={cn(
+                                            'text-sm font-medium transition-colors hover:text-primary flex items-center gap-1 py-2',
+                                            pathname.startsWith(item.href) ? 'text-primary' : 'text-muted-foreground'
+                                        )}
+                                    >
+                                        {item.name}
+                                        <ChevronDown className={cn("w-4 h-4 transition-transform duration-200", servicesDropdownOpen ? "rotate-180" : "")} />
+                                    </button>
 
-                    {/* Mobile Menu Toggle */}
-                    <div className="md:hidden flex items-center gap-3">
-                        <ThemeToggle />
-                        <button
-                            className="p-2 text-foreground"
-                            onClick={() => setIsOpen(!isOpen)}
-                            aria-label="Toggle menu"
-                        >
-                            {isOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            {/* Mobile Nav */}
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-20 left-0 right-0 bg-background border-b shadow-lg md:hidden"
-                    >
-                        <div className="container mx-auto px-4 py-8 flex flex-col space-y-4">
-                            {navItems.map((item) => (
+                                    {/* Dropdown Menu */}
+                                    <AnimatePresence>
+                                        {servicesDropdownOpen && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: 10 }}
+                                                transition={{ duration: 0.2 }}
+                                                className="absolute top-full left-0 w-64 pt-2"
+                                            >
+                                                <div className="bg-popover border border-border rounded-xl shadow-lg overflow-hidden p-2">
+                                                    {serviceDropdownItems.map((service) => (
+                                                        <Link
+                                                            key={service.name}
+                                                            href={service.href}
+                                                            className={cn(
+                                                                "block px-4 py-3 text-sm rounded-lg transition-colors hover:bg-accent/10 hover:text-accent",
+                                                                pathname === service.href ? "bg-accent/10 text-accent font-medium" : "text-foreground"
+                                                            )}
+                                                        >
+                                                            {service.name}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            ) : (
                                 <Link
-                                    key={item.href}
                                     href={item.href}
                                     className={cn(
-                                        'text-lg font-medium py-2 border-b border-border flex justify-between items-center',
-                                        pathname === item.href ? 'text-accent' : 'text-foreground'
+                                        'text-sm font-medium transition-colors hover:text-primary relative',
+                                        pathname === item.href ? 'text-primary' : 'text-muted-foreground'
                                     )}
                                 >
                                     {item.name}
-                                    <ChevronRight size={16} className="text-muted-foreground" />
+                                    {pathname === item.href && (
+                                        <motion.div
+                                            layoutId="underline"
+                                            className="absolute left-0 right-0 -bottom-1 h-0.5 bg-primary"
+                                        />
+                                    )}
                                 </Link>
-                            ))}
-                            <Link href="/contact" className={buttonVariants({ className: 'w-full mt-4' })}>
-                                Get Started
-                            </Link>
+                            )}
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                    ))}
+                </nav>
+
+                {/* Actions */}
+                <div className="hidden md:flex items-center gap-4">
+                    <ThemeToggle />
+                    <Link href="/contact" className={buttonVariants({ variant: 'primary', size: 'sm' })}>
+                        Contact Us
+                    </Link>
+                </div>
+
+                {/* Mobile Menu Toggle */}
+                <button
+                    className="md:hidden z-50 p-2"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    {mobileMenuOpen ? <X /> : <Menu />}
+                </button>
+
+                {/* Mobile Navigation Overlay */}
+                <AnimatePresence>
+                    {mobileMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, x: '100%' }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: '100%' }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                            className="fixed inset-0 bg-background z-40 md:hidden flex flex-col pt-24 px-6"
+                        >
+                            <nav className="flex flex-col gap-6 text-lg">
+                                {navItems.map((item) => (
+                                    <div key={item.name}>
+                                        {item.hasDropdown ? (
+                                            <div>
+                                                <button
+                                                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                                                    className={cn(
+                                                        'flex items-center justify-between w-full font-medium transition-colors',
+                                                        pathname.startsWith(item.href) ? 'text-primary' : 'text-foreground'
+                                                    )}
+                                                >
+                                                    {item.name}
+                                                    <ChevronDown className={cn("w-5 h-5 transition-transform", mobileServicesOpen ? "rotate-180" : "")} />
+                                                </button>
+                                                <AnimatePresence>
+                                                    {mobileServicesOpen && (
+                                                        <motion.div
+                                                            initial={{ height: 0, opacity: 0 }}
+                                                            animate={{ height: 'auto', opacity: 1 }}
+                                                            exit={{ height: 0, opacity: 0 }}
+                                                            className="overflow-hidden pl-4 border-l-2 border-border mt-2 space-y-3"
+                                                        >
+                                                            {serviceDropdownItems.map((service) => (
+                                                                <Link
+                                                                    key={service.name}
+                                                                    href={service.href}
+                                                                    onClick={() => setMobileMenuOpen(false)}
+                                                                    className="block text-base text-muted-foreground hover:text-primary py-1"
+                                                                >
+                                                                    {service.name}
+                                                                </Link>
+                                                            ))}
+                                                        </motion.div>
+                                                    )}
+                                                </AnimatePresence>
+                                            </div>
+                                        ) : (
+                                            <Link
+                                                href={item.href}
+                                                onClick={() => setMobileMenuOpen(false)}
+                                                className={cn(
+                                                    'font-medium transition-colors hover:text-primary block',
+                                                    pathname === item.href ? 'text-primary' : 'text-foreground'
+                                                )}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        )}
+                                    </div>
+                                ))}
+                                <div className="h-px bg-border my-2" />
+                                <Link
+                                    href="/contact"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={buttonVariants({ variant: 'primary', size: 'lg', className: 'w-full' })}
+                                >
+                                    Contact Us
+                                </Link>
+                            </nav>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
         </header>
     );
 }

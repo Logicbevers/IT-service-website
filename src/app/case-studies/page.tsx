@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
+import { PageBanner } from '@/components/shared/PageBanner';
 import { CaseStudyCard } from '@/components/shared/CaseStudyCard';
 import { client, caseStudiesQuery } from '@/lib/sanity';
 import seedData from '@/sanity/seed-content.json';
@@ -25,14 +26,11 @@ export default async function CaseStudiesPage() {
 
     return (
         <div className="min-h-screen">
-            <Section className="bg-muted/30 py-20">
-                <div className="max-w-3xl mx-auto text-center">
-                    <Heading level={1} className="mb-6">Success Stories</Heading>
-                    <p className="text-xl text-muted-foreground">
-                        See how we've helped leading organizations achieve their technology goals.
-                    </p>
-                </div>
-            </Section>
+            <PageBanner
+                category="Success Stories"
+                title="Case Studies"
+                subtitle="See how we've helped leading organizations achieve their technology goals."
+            />
 
             <Section>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

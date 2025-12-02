@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
-import { Button, buttonVariants } from '@/components/ui/Button';
+import { PageBanner } from '@/components/shared/PageBanner';
+import { buttonVariants } from '@/components/ui/Button';
 import { client, solutionBySlugQuery, solutionsQuery } from '@/lib/sanity';
 import seedData from '@/sanity/seed-content.json';
 import Link from 'next/link';
@@ -57,39 +57,11 @@ export default async function SolutionDetailPage({ params }: Props) {
 
     return (
         <div className="min-h-screen">
-            {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-24 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
-                <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <div className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent text-sm font-medium mb-4">
-                                Industry Solution
-                            </div>
-                            <Heading level={1} className="mb-6 text-white">{solution.title}</Heading>
-                            <p className="text-xl text-gray-300 mb-8">{solution.shortDescription}</p>
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="/contact" className={buttonVariants({ size: 'lg' })}>
-                                    Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                                </Link>
-                                <Link href="/case-studies" className={buttonVariants({ size: 'lg', variant: 'outline', className: 'text-white border-white hover:bg-white/10' })}>
-                                    View Case Studies
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            {/* Placeholder for a relevant illustration or 3D element */}
-                            <div className="aspect-video rounded-xl bg-white/5 border border-white/10 p-8 flex items-center justify-center backdrop-blur-sm">
-                                <div className="text-center">
-                                    <Zap className="w-16 h-16 text-accent mx-auto mb-4" />
-                                    <h3 className="text-2xl font-bold mb-2">Accelerate Growth</h3>
-                                    <p className="text-gray-400">Tailored technology to speed up your business outcomes.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PageBanner
+                category="Industry Solution"
+                title={solution.title}
+                subtitle={solution.shortDescription}
+            />
 
             <Section>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

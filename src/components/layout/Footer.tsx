@@ -1,10 +1,25 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useTheme } from 'next-themes';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 export function Footer() {
+    const [mounted, setMounted] = useState(false);
+    const { theme, resolvedTheme } = useTheme();
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // Determine which logo to show based on theme
+    const logoSrc = mounted && (resolvedTheme === 'dark' || theme === 'dark')
+        ? '/logo-light.png'
+        : '/logo-dark.png';
+
     return (
         <footer className="bg-[#181A1B] text-white border-t border-white/10 pt-20 pb-10">
             <div className="container mx-auto px-4 md:px-6">
@@ -12,10 +27,18 @@ export function Footer() {
 
                     {/* Brand Column */}
                     <div className="space-y-6">
-                        <Link href="/" className="inline-block">
-                            <span className="text-2xl font-bold tracking-tight text-white">
-                                Anti<span className="text-accent">gravity</span>
-                            </span>
+                        <Link href="/" className="inline-block relative h-10">
+                            {mounted ? (
+                                <Image
+                                    src="/logo-light.png"
+                                    alt="NRT Groups Logo"
+                                    width={140}
+                                    height={40}
+                                    className="h-10 w-auto object-contain"
+                                />
+                            ) : (
+                                <div className="h-10 w-[140px]" />
+                            )}
                         </Link>
                         <p className="text-gray-400 leading-relaxed">
                             Empowering businesses with scalable, secure, and innovative technology solutions.
@@ -40,14 +63,18 @@ export function Footer() {
                             Company
                         </h4>
                         <ul className="space-y-4">
-                            {['About Us', 'Services', 'Case Studies', 'Careers', 'Contact'].map((item) => (
-                                <li key={item}>
-                                    <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
-                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li>
+                                <Link href="/about" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Contact
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -58,7 +85,7 @@ export function Footer() {
                             Services
                         </h4>
                         <ul className="space-y-4">
-                            {['Cloud Solutions', 'Cybersecurity', 'AI & Machine Learning', 'Web Development', 'Consulting'].map((item) => (
+                            {['IT Services', 'Logistics', 'Custom Software', 'Digital Marketing', 'Professional Training'].map((item) => (
                                 <li key={item}>
                                     <Link href="/services" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
@@ -95,7 +122,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">
-                        © {new Date().getFullYear()} Antigravity. All rights reserved.
+                        © {new Date().getFullYear()} NRT Groups. All rights reserved.
                     </p>
                     <div className="flex gap-8 text-sm text-gray-500">
                         <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
