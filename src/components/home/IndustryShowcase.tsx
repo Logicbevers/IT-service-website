@@ -9,37 +9,37 @@ export function IndustryShowcase() {
             title: 'Healthcare & Life Sciences',
             description: 'Digital transformation solutions for hospitals, clinics, and pharmaceutical companies to improve patient care and operational efficiency.',
             icon: <Heart className="w-8 h-8" />,
-            href: '/solutions'
+            href: '/solutions/healthcare'
         },
         {
             title: 'Retail & E-Commerce',
             description: 'End-to-end solutions for online and offline retail, including inventory management, customer analytics, and omnichannel experiences.',
             icon: <ShoppingCart className="w-8 h-8" />,
-            href: '/solutions'
+            href: '/solutions/retail'
         },
         {
             title: 'Manufacturing & Industrial',
             description: 'Smart manufacturing solutions with IoT integration, supply chain optimization, and predictive maintenance systems.',
             icon: <Factory className="w-8 h-8" />,
-            href: '/solutions'
+            href: '/solutions/manufacturing'
         },
         {
             title: 'Education & Training',
             description: 'Learning management systems, virtual classrooms, and corporate training platforms to empower educational institutions.',
             icon: <GraduationCap className="w-8 h-8" />,
-            href: '/solutions'
+            href: '/solutions/education'
         },
         {
             title: 'Logistics & Transportation',
             description: 'Advanced logistics solutions including route optimization, fleet management, and real-time tracking systems.',
             icon: <Plane className="w-8 h-8" />,
-            href: '/services/logistics'
+            href: '/solutions/logistics'
         },
         {
             title: 'Enterprise & Corporate',
             description: 'Custom enterprise solutions for large organizations including ERP, CRM, and business intelligence platforms.',
             icon: <Building2 className="w-8 h-8" />,
-            href: '/solutions'
+            href: '/solutions/enterprise'
         }
     ];
 

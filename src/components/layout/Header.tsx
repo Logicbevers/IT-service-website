@@ -12,9 +12,9 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-    { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Services', href: '/services', hasDropdown: true, dropdownType: 'services' },
+    { name: 'Solutions', href: '/solutions', hasDropdown: true, dropdownType: 'solutions' },
     { name: 'About', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
     { name: 'Contact', href: '/contact' },
 ];
 
@@ -26,11 +26,22 @@ const serviceDropdownItems = [
     { name: 'Customer-First Approach', href: '/services/customer-first' },
 ];
 
+const solutionDropdownItems = [
+    { name: 'Healthcare & Life Sciences', href: '/solutions/healthcare' },
+    { name: 'Retail & E-Commerce', href: '/solutions/retail' },
+    { name: 'Manufacturing & Industrial', href: '/solutions/manufacturing' },
+    { name: 'Education & Training', href: '/solutions/education' },
+    { name: 'Logistics & Transportation', href: '/solutions/logistics' },
+    { name: 'Enterprise & Corporate', href: '/solutions/enterprise' },
+];
+
 export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+    const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+    const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const pathname = usePathname();
     const { theme, resolvedTheme } = useTheme();
@@ -50,6 +61,7 @@ export function Header() {
     useEffect(() => {
         setMobileMenuOpen(false);
         setMobileServicesOpen(false);
+        setMobileSolutionsOpen(false);
     }, [pathname]);
 
     // Determine which logo to show based on theme
@@ -88,8 +100,8 @@ export function Header() {
                             {item.hasDropdown ? (
                                 <div
                                     className="relative"
-                                    onMouseEnter={() => setServicesDropdownOpen(true)}
-                                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                                    onMouseEnter={() => item.dropdownType === 'services' ? setServicesDropdownOpen(true) : setSolutionsDropdownOpen(true)}
+                                    onMouseLeave={() => item.dropdownType === 'services' ? setServicesDropdownOpen(false) : setSolutionsDropdownOpen(false)}
                                 >
                                     <button
                                         className={cn(
@@ -98,12 +110,15 @@ export function Header() {
                                         )}
                                     >
                                         {item.name}
-                                        <ChevronDown className={cn("w-4 h-4 transition-transform duration-200", servicesDropdownOpen ? "rotate-180" : "")} />
+                                        <ChevronDown className={cn(
+                                            "w-4 h-4 transition-transform duration-200",
+                                            (item.dropdownType === 'services' && servicesDropdownOpen) || (item.dropdownType === 'solutions' && solutionsDropdownOpen) ? "rotate-180" : ""
+                                        )} />
                                     </button>
 
                                     {/* Dropdown Menu */}
                                     <AnimatePresence>
-                                        {servicesDropdownOpen && (
+                                        {((item.dropdownType === 'services' && servicesDropdownOpen) || (item.dropdownType === 'solutions' && solutionsDropdownOpen)) && (
                                             <motion.div
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
@@ -112,16 +127,16 @@ export function Header() {
                                                 className="absolute top-full left-0 w-64 pt-2"
                                             >
                                                 <div className="bg-popover border border-border rounded-xl shadow-lg overflow-hidden p-2">
-                                                    {serviceDropdownItems.map((service) => (
+                                                    {(item.dropdownType === 'services' ? serviceDropdownItems : solutionDropdownItems).map((dropdownItem) => (
                                                         <Link
-                                                            key={service.name}
-                                                            href={service.href}
+                                                            key={dropdownItem.name}
+                                                            href={dropdownItem.href}
                                                             className={cn(
                                                                 "block px-4 py-3 text-sm rounded-lg transition-colors hover:bg-accent/10 hover:text-accent",
-                                                                pathname === service.href ? "bg-accent/10 text-accent font-medium" : "text-foreground"
+                                                                pathname === dropdownItem.href ? "bg-accent/10 text-accent font-medium" : "text-foreground"
                                                             )}
                                                         >
-                                                            {service.name}
+                                                            {dropdownItem.name}
                                                         </Link>
                                                     ))}
                                                 </div>
@@ -183,31 +198,34 @@ export function Header() {
                                         {item.hasDropdown ? (
                                             <div>
                                                 <button
-                                                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                                                    onClick={() => item.dropdownType === 'services' ? setMobileServicesOpen(!mobileServicesOpen) : setMobileSolutionsOpen(!mobileSolutionsOpen)}
                                                     className={cn(
                                                         'flex items-center justify-between w-full font-medium transition-colors',
                                                         pathname.startsWith(item.href) ? 'text-primary' : 'text-foreground'
                                                     )}
                                                 >
                                                     {item.name}
-                                                    <ChevronDown className={cn("w-5 h-5 transition-transform", mobileServicesOpen ? "rotate-180" : "")} />
+                                                    <ChevronDown className={cn(
+                                                        "w-5 h-5 transition-transform",
+                                                        (item.dropdownType === 'services' && mobileServicesOpen) || (item.dropdownType === 'solutions' && mobileSolutionsOpen) ? "rotate-180" : ""
+                                                    )} />
                                                 </button>
                                                 <AnimatePresence>
-                                                    {mobileServicesOpen && (
+                                                    {((item.dropdownType === 'services' && mobileServicesOpen) || (item.dropdownType === 'solutions' && mobileSolutionsOpen)) && (
                                                         <motion.div
                                                             initial={{ height: 0, opacity: 0 }}
                                                             animate={{ height: 'auto', opacity: 1 }}
                                                             exit={{ height: 0, opacity: 0 }}
                                                             className="overflow-hidden pl-4 border-l-2 border-border mt-2 space-y-3"
                                                         >
-                                                            {serviceDropdownItems.map((service) => (
+                                                            {(item.dropdownType === 'services' ? serviceDropdownItems : solutionDropdownItems).map((dropdownItem) => (
                                                                 <Link
-                                                                    key={service.name}
-                                                                    href={service.href}
+                                                                    key={dropdownItem.name}
+                                                                    href={dropdownItem.href}
                                                                     onClick={() => setMobileMenuOpen(false)}
                                                                     className="block text-base text-muted-foreground hover:text-primary py-1"
                                                                 >
-                                                                    {service.name}
+                                                                    {dropdownItem.name}
                                                                 </Link>
                                                             ))}
                                                         </motion.div>

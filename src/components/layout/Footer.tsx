@@ -23,7 +23,7 @@ export function Footer() {
     return (
         <footer className="bg-[#181A1B] text-white border-t border-white/10 pt-20 pb-10">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
 
                     {/* Brand Column */}
                     <div className="space-y-6">
@@ -78,6 +78,7 @@ export function Footer() {
                         </ul>
                     </div>
 
+
                     {/* Services */}
                     <div>
                         <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
@@ -85,14 +86,64 @@ export function Footer() {
                             Services
                         </h4>
                         <ul className="space-y-4">
-                            {['IT Services', 'Logistics', 'Custom Software', 'Digital Marketing', 'Professional Training'].map((item) => (
-                                <li key={item}>
-                                    <Link href="/services" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
-                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li>
+                                <Link href="/services/logistics" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Logistics & Supply Chain
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/services/software-development" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Software Development
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/services/digital-marketing" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Digital Marketing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/services/training" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Training & Development
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Solutions */}
+                    <div>
+                        <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-accent"></span>
+                            Solutions
+                        </h4>
+                        <ul className="space-y-4">
+                            <li>
+                                <Link href="/solutions/healthcare" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Healthcare
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/solutions/retail" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Retail & E-Commerce
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/solutions/manufacturing" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Manufacturing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/solutions/education" className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group">
+                                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                    Education
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 

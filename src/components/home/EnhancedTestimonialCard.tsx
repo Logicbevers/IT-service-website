@@ -39,8 +39,8 @@ export function EnhancedTestimonialCard({ name, role, company, content, rating, 
                         >
                             <Star
                                 className={`w-5 h-5 ${i < rating
-                                        ? 'fill-[#F6A400] text-[#F6A400]'
-                                        : 'fill-gray-200 text-gray-200'
+                                    ? 'fill-[#F6A400] text-[#F6A400]'
+                                    : 'fill-gray-200 text-gray-200'
                                     }`}
                             />
                         </motion.div>
@@ -53,16 +53,10 @@ export function EnhancedTestimonialCard({ name, role, company, content, rating, 
                 </p>
 
                 {/* Client Info */}
-                <div className="flex items-center gap-4 relative z-10">
-                    {/* Avatar Placeholder */}
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#F6A400] to-[#E98000] flex items-center justify-center text-white font-bold text-lg">
-                        {name.charAt(0)}
-                    </div>
-                    <div>
-                        <div className="font-bold text-[#1E1E1E]">{name}</div>
-                        <div className="text-sm text-[#4A4A4A]">
-                            {role} at {company}
-                        </div>
+                <div className="relative z-10">
+                    <div className="font-bold text-[#1E1E1E] text-lg mb-1">{name}</div>
+                    <div className="text-sm text-[#4A4A4A]">
+                        {role} at {company}
                     </div>
                 </div>
             </div>
