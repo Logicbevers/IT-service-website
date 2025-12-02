@@ -94,27 +94,6 @@ export default async function Home() {
       </div>
 
 
-      {/* Trust / Testimonials (Dark Anchor) */}
-      <Section className="relative bg-[#23272F] text-white overflow-hidden pt-32 pb-32" animate>
-        <SectionDivider type="curve" position="top" fill="#FFFFFF" />
-
-        <div className="relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 justify-center mb-6">
-              <span className="w-2 h-2 rounded-full bg-accent"></span>
-              <span className="text-sm text-accent font-bold uppercase tracking-wider">Client Trust</span>
-              <span className="w-2 h-2 rounded-full bg-accent"></span>
-            </div>
-            <Heading level={2} className="text-white mb-6 text-4xl md:text-5xl">Excellence Delivered</Heading>
-            <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Partnering with industry leaders to create lasting value.
-            </p>
-          </div>
-          <TestimonialCarousel testimonials={testimonials} />
-        </div>
-        <SectionDivider type="diagonal" position="bottom" fill="#FFFFFF" />
-      </Section>
-
 
       <TestimonialsSection />
 

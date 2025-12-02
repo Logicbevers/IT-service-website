@@ -15,7 +15,6 @@ const navItems = [
     { name: 'Services', href: '/services', hasDropdown: true, dropdownType: 'services' },
     { name: 'Solutions', href: '/solutions', hasDropdown: true, dropdownType: 'solutions' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
 ];
 
 const serviceDropdownItems = [
