@@ -1,5 +1,5 @@
 import { HomeBanner } from '@/components/home/HomeBanner';
-import { LogoMarquee } from '@/components/home/LogoMarquee';
+
 import { ValueProposition } from '@/components/home/ValueProposition';
 import { MissionVisionSection } from '@/components/home/MissionVisionSection';
 import { IndustryShowcase } from '@/components/home/IndustryShowcase';
@@ -59,7 +59,7 @@ export default async function Home() {
     <div className="flex flex-col gap-0 relative">
       <HomeBanner />
 
-      <LogoMarquee />
+
 
       <ValueProposition />
 
