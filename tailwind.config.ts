@@ -54,6 +54,12 @@ const config: Config = {
             fontFamily: {
                 sans: ['var(--font-inter)', 'sans-serif'],
             },
+            backgroundImage: {
+                'gradient-hero': 'var(--gradient-hero)',
+                'gradient-cta': 'var(--gradient-cta)',
+                'gradient-soft': 'var(--gradient-soft)',
+                'gradient-card': 'var(--gradient-card)',
+            },
         },
     },
     plugins: [],

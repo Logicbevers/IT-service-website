@@ -53,14 +53,6 @@ export function ConversionCTA() {
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
-                        <Button
-                            variant="ghost"
-                            size="lg"
-                            className="border-2 border-white text-white hover:bg-white/10 rounded-full px-10 h-16 text-lg font-semibold"
-                        >
-                            <Download className="mr-2 h-5 w-5" />
-                            Download Company Profile
-                        </Button>
                     </div>
 
                     {/* Trust Indicators */}
@@ -100,7 +92,7 @@ export function ConversionCTA() {
                             <Phone className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
-                        <p className="text-white/90 mb-2">+1 (555) 123-4567</p>
+                        <p className="text-white/90 mb-2">+919779369555</p>
                         <p className="text-sm text-white/70">Available 24/7</p>
                     </div>
 
@@ -110,7 +102,7 @@ export function ConversionCTA() {
                             <Mail className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-                        <p className="text-white/90 mb-2">hello@nrtgroups.com</p>
+                        <p className="text-white/90 mb-2">Operations@nrtgroups.com</p>
                         <p className="text-sm text-white/70">Quick response</p>
                     </div>
 
@@ -120,8 +112,8 @@ export function ConversionCTA() {
                             <MapPin className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
-                        <p className="text-white/90 mb-2">Global offices</p>
-                        <p className="text-sm text-white/70">50+ locations</p>
+                        <p className="text-white/90 mb-2">E-43, Phase-8, Phase 8</p>
+                        <p className="text-sm text-white/70">Sahibzada Ajit Singh Nagar, Punjab 160071</p>
                     </div>
                 </motion.div>
             </div>

@@ -34,8 +34,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold mb-1 text-lg">Email</h3>
-                                    <p className="text-muted-foreground hover:text-accent transition-colors cursor-pointer">hello@premiumit.com</p>
-                                    <p className="text-muted-foreground hover:text-accent transition-colors cursor-pointer">support@premiumit.com</p>
+                                    <p className="text-muted-foreground hover:text-accent transition-colors cursor-pointer">Operations@nrtgroups.com</p>
                                 </div>
                             </div>
 
@@ -45,8 +44,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold mb-1 text-lg">Phone</h3>
-                                    <p className="text-muted-foreground hover:text-accent transition-colors cursor-pointer">+1 (555) 123-4567</p>
-                                    <p className="text-muted-foreground hover:text-accent transition-colors cursor-pointer">+1 (555) 987-6543</p>
+                                    <p className="text-muted-foreground hover:text-accent transition-colors cursor-pointer">+919779369555</p>
                                 </div>
                             </div>
 
@@ -57,9 +55,9 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="font-bold mb-1 text-lg">Office</h3>
                                     <p className="text-muted-foreground">
-                                        123 Tech Blvd<br />
-                                        San Francisco, CA 94105<br />
-                                        United States
+                                        E-43, Phase-8, Phase 8<br />
+                                        Sahibzada Ajit Singh Nagar<br />
+                                        Punjab 160071
                                     </p>
                                 </div>
                             </div>

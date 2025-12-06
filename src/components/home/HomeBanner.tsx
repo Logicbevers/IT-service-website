@@ -95,12 +95,7 @@ export function HomeBanner() {
                             transition={{ duration: 0.8, delay: 0.3 }}
                             className="flex flex-wrap gap-4 mb-10"
                         >
-                            <Link href="/solutions" className="inline-flex">
-                                <Button size="lg" className="bg-gradient-to-r from-[#F6A400] to-[#E98000] hover:from-[#E98000] hover:to-[#D86E00] text-white rounded-full px-8 h-14 text-lg shadow-[0_0_25px_rgba(246,164,0,0.25)] hover:shadow-[0_0_35px_rgba(246,164,0,0.35)] hover:scale-105 transition-all relative overflow-hidden group">
-                                    Explore Our Solutions
-                                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </Link>
+
                             <Link href="/about" className="inline-flex">
                                 <Button variant="ghost" size="lg" className="rounded-full px-8 h-14 text-lg text-white border-2 border-white/30 hover:border-white hover:bg-white/10 transition-all">
                                     Watch Our Story

@@ -17,7 +17,7 @@ async function getSolutions() {
         const solutions = await client.fetch(solutionsQuery);
         return solutions;
     } catch (error) {
-        console.warn('Failed to fetch solutions, using seed data:', error);
+        console.warn('Failed to fetch solutions from Sanity, using seed data.');
         return seedData.solutions;
     }
 }

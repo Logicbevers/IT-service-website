@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 export function Footer() {
@@ -43,17 +43,6 @@ export function Footer() {
                         <p className="text-gray-400 leading-relaxed">
                             Empowering businesses with scalable, secure, and innovative technology solutions.
                         </p>
-                        <div className="flex gap-4">
-                            {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                                <a
-                                    key={i}
-                                    href="#"
-                                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white transition-all duration-300"
-                                >
-                                    <Icon className="w-5 h-5" />
-                                </a>
-                            ))}
-                        </div>
                     </div>
 
                     {/* Quick Links */}
@@ -156,15 +145,15 @@ export function Footer() {
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4 text-gray-400">
                                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
-                                <span>123 Innovation Drive,<br />Tech Valley, CA 94043</span>
+                                <span>E-43, Phase-8, Phase 8, Sahibzada Ajit Singh Nagar, Punjab 160071</span>
                             </li>
                             <li className="flex items-center gap-4 text-gray-400">
                                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                                <span>+1 (555) 123-4567</span>
+                                <span>+919779369555</span>
                             </li>
                             <li className="flex items-center gap-4 text-gray-400">
                                 <Mail className="w-5 h-5 text-accent shrink-0" />
-                                <span>hello@antigravity.com</span>
+                                <span>Operations@nrtgroups.com</span>
                             </li>
                         </ul>
                     </div>
