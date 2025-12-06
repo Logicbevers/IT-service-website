@@ -65,7 +65,7 @@ export function TestimonialsSection() {
                     </h2>
 
                     <p className="text-lg text-[#4A4A4A] leading-relaxed">
-                        Don't just take our word for it. Hear what our clients have to say about their experience working with NRT Groups.
+                        Don&apos;t just take our word for it. Hear what our clients have to say about their experience working with NRT Groups.
                     </p>
                 </div>
 

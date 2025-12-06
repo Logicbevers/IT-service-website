@@ -2,9 +2,7 @@ import { Metadata } from 'next';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
 import { PageBanner } from '@/components/shared/PageBanner';
-import { CheckCircle, Users, Globe, Award, Sparkles, ArrowRight, TrendingUp, Target, Zap, Layers } from 'lucide-react';
-import { buttonVariants } from '@/components/ui/Button';
-import Link from 'next/link';
+import { CheckCircle, Users, Globe, Award, TrendingUp, Target, Zap, Layers } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -35,7 +33,7 @@ export default async function AboutPage() {
                             With a strong presence across <strong className="text-foreground">IT services, logistics, custom software development, digital marketing, and education</strong>, we deliver integrated solutions that help organizations operate smarter.
                         </p>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            In a world that evolves every minute, businesses need a partner that understands speed, precision, and real-world impact. That's exactly what we bring to the table.
+                            In a world that evolves every minute, businesses need a partner that understands speed, precision, and real-world impact. That&apos;s exactly what we bring to the table.
                         </p>
                     </div>
                     <div className="md:col-span-4 flex justify-center md:justify-end">
@@ -93,7 +91,7 @@ export default async function AboutPage() {
                     </div>
                     <Heading level={2} className="mb-6 text-4xl md:text-5xl">Why Choose Us</Heading>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                        Partnering with NRT Groups means working with a team that understands the demands of today's fast-moving digital environment.
+                        Partnering with NRT Groups means working with a team that understands the demands of today&apos;s fast-moving digital environment.
                     </p>
                 </div>
 

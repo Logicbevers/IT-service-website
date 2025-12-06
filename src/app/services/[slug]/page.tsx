@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
-import { Button, buttonVariants } from '@/components/ui/Button';
+import { buttonVariants } from '@/components/ui/Button';
 import { client, serviceBySlugQuery, servicesQuery } from '@/lib/sanity';
 import seedData from '@/sanity/seed-content.json';
 import Link from 'next/link';
@@ -18,9 +18,8 @@ async function getService(slug: string) {
     try {
         const service = await client.fetch(serviceBySlugQuery, { slug });
         return service;
-    } catch (error) {
-        console.warn('Failed to fetch service, using seed data:', error);
-        // @ts-ignore
+    } catch {
+        console.warn('Failed to fetch service from Sanity, using seed data.');
         return seedData.services.find((s: any) => s.slug.current === slug);
     }
 }
@@ -41,7 +40,7 @@ export async function generateStaticParams() {
         return services.map((service: Service) => ({
             slug: service.slug.current,
         }));
-    } catch (error) {
+    } catch {
         return seedData.services.map((service: any) => ({
             slug: service.slug.current,
         }));

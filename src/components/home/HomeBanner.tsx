@@ -2,7 +2,7 @@
 
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import { ArrowRight, Globe } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 

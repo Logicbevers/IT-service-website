@@ -38,18 +38,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         caseStudies = await client.fetch(caseStudiesQuery);
         posts = await client.fetch(blogPostsQuery);
         jobs = await client.fetch(jobsQuery);
-    } catch (error) {
+    } catch {
         console.warn('Sitemap: Failed to fetch from Sanity, using seed data');
-        // @ts-ignore - seed data might not perfectly match types but is close enough for sitemap
-        services = seedData.services;
-        // @ts-ignore
-        solutions = seedData.solutions;
-        // @ts-ignore
-        caseStudies = seedData.caseStudies;
-        // @ts-ignore
-        posts = seedData.blogPosts;
-        // @ts-ignore
-        jobs = seedData.jobs;
+        services = seedData.services as any;
+        solutions = seedData.solutions as any;
+        caseStudies = seedData.caseStudies as any;
+        posts = seedData.blogPosts as any;
+        jobs = seedData.jobs as any;
     }
 
     const serviceRoutes = services.map((item: Service) => ({

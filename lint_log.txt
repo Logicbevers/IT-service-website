@@ -1,0 +1,318 @@
+﻿
+> temp_app@0.1.0 lint
+> eslint
+
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\jest.config.js
+  1:18  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\next.config.ts
+  14:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\about\page.tsx
+   5:44   warning  'Sparkles' is defined but never used                             @typescript-eslint/no-unused-vars
+   5:54   warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+   6:10   warning  'buttonVariants' is defined but never used                       @typescript-eslint/no-unused-vars
+   7:8    warning  'Link' is defined but never used                                 @typescript-eslint/no-unused-vars
+  38:155  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  96:115  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\api\careers\apply\route.ts
+  34:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\case-studies\[slug]\page.tsx
+    6:10  warning  'Button' is defined but never used                               @typescript-eslint/no-unused-vars
+   20:14  warning  'error' is defined but never used                                @typescript-eslint/no-unused-vars
+   22:46  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   39:36  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   42:14  warning  'error' is defined but never used                                @typescript-eslint/no-unused-vars
+   43:49  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  155:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\case-studies\page.tsx
+   3:10  warning  'Heading' is defined but never used       @typescript-eslint/no-unused-vars
+  18:14  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  37:46  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\contact\page.tsx
+   6:38  warning  'Sparkles' is defined but never used                             @typescript-eslint/no-unused-vars
+  93:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  93:50  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\insights\[slug]\page.tsx
+   6:10  warning  'Button' is defined but never used        @typescript-eslint/no-unused-vars
+  20:14  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  22:44  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  39:33  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  42:14  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  43:46  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\insights\page.tsx
+  15:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\not-found.tsx
+   4:16  warning  'ArrowLeft' is defined but never used                            @typescript-eslint/no-unused-vars
+  18:35  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\page.tsx
+  13:10  warning  'ServiceCard' is defined but never used                          @typescript-eslint/no-unused-vars
+  14:10  warning  'CaseStudyCard' is defined but never used                        @typescript-eslint/no-unused-vars
+  15:10  warning  'TestimonialCarousel' is defined but never used                  @typescript-eslint/no-unused-vars
+  19:10  warning  'Button' is defined but never used                               @typescript-eslint/no-unused-vars
+  19:18  warning  'buttonVariants' is defined but never used                       @typescript-eslint/no-unused-vars
+  20:8   warning  'Link' is defined but never used                                 @typescript-eslint/no-unused-vars
+  21:10  warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+  21:22  warning  'Sparkles' is defined but never used                             @typescript-eslint/no-unused-vars
+  22:10  warning  'Service' is defined but never used                              @typescript-eslint/no-unused-vars
+  22:19  warning  'CaseStudy' is defined but never used                            @typescript-eslint/no-unused-vars
+  22:30  warning  'Testimonial' is defined but never used                          @typescript-eslint/no-unused-vars
+  45:12  warning  'error' is defined but never used                                @typescript-eslint/no-unused-vars
+  56:11  warning  'services' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  56:21  warning  'caseStudies' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  56:34  warning  'testimonials' is assigned a value but never used                @typescript-eslint/no-unused-vars
+  84:15  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\services\[slug]\page.tsx
+   6:10  warning  'Button' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  21:14  warning  'error' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+  23:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  24:43  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+  44:14  warning  'error' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+  45:48  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\services\customer-first\page.tsx
+    7:73  warning  'Heart' is defined but never used                                @typescript-eslint/no-unused-vars
+  177:32  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\services\page.tsx
+  18:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\services\software-development\page.tsx
+    7:35  warning  'Code2' is defined but never used                                @typescript-eslint/no-unused-vars
+    7:92  warning  'ChevronRight' is defined but never used                         @typescript-eslint/no-unused-vars
+  179:32  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\services\training\page.tsx
+    7:35  warning  'GraduationCap' is defined but never used                        @typescript-eslint/no-unused-vars
+  175:82  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\sitemap.ts
+  41:14  warning  'error' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+  43:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  45:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  47:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  49:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  51:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\solutions\[slug]\page.tsx
+  10:23  warning  'ArrowRight' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+  21:14  warning  'error' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+  23:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  24:44  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+  44:14  warning  'error' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+  45:50  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\solutions\education\page.tsx
+  85:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\solutions\enterprise\page.tsx
+   6:22  warning  'Building2' is defined but never used                            @typescript-eslint/no-unused-vars
+  85:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  85:81  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\solutions\healthcare\page.tsx
+  85:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\solutions\page.tsx
+   3:10  warning  'Heading' is defined but never used  @typescript-eslint/no-unused-vars
+  19:14  warning  'error' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\solutions\retail\page.tsx
+  85:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\app\terms\page.tsx
+  24:151  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:155  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:183  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:187  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:189  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:192  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:197  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:201  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:406  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  24:411  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  32:241  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  32:249  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  32:320  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  32:326  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\ConversionCTA.tsx
+   5:22  warning  'Download' is defined but never used                             @typescript-eslint/no-unused-vars
+  42:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\EnhancedTestimonialCard.tsx
+  52:21  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  52:31  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\Hero.tsx
+  5:10  warning  'Button' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\HomeBanner.tsx
+  5:10  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\LogoMarquee.tsx
+  18:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\LogoMarquee.tsx:18:9
+  16 |             duration: `${5 + Math.random() * 5}s`,
+  17 |         }));
+> 18 |         setParticles(newParticles);
+     |         ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  19 |     }, []);
+  20 |
+  21 |     const clients = [  react-hooks/set-state-in-effect
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\MetricsSection.tsx
+  4:44  warning  'ArrowUpRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\home\TestimonialsSection.tsx
+  68:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\insights\InsightsClient.tsx
+  6:10  warning  'Heading' is defined but never used   @typescript-eslint/no-unused-vars
+  9:10  warning  'Sparkles' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\layout\Footer.tsx
+   8:10  warning  'Button' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  15:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\layout\Footer.tsx:15:9
+  13 |
+  14 |     useEffect(() => {
+> 15 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |     }, []);
+  17 |
+  18 |     // Determine which logo to show based on theme  react-hooks/set-state-in-effect
+  19:11  warning  'logoSrc' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\layout\Header.tsx
+   9:19  warning  'ChevronRight' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  10:10  warning  'Button' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+  49:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\layout\Header.tsx:49:9
+  47 |
+  48 |     useEffect(() => {
+> 49 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  50 |     }, []);
+  51 |
+  52 |     useEffect(() => {                                                                                react-hooks/set-state-in-effect
+  61:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\layout\Header.tsx:61:9
+  59 |
+  60 |     useEffect(() => {
+> 61 |         setMobileMenuOpen(false);
+     |         ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  62 |         setMobileServicesOpen(false);
+  63 |         setMobileSolutionsOpen(false);
+  64 |     }, [pathname]);  react-hooks/set-state-in-effect
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\shared\ContactForm.tsx
+  48:59  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\shared\TestimonialCarousel.tsx
+  101:37  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  101:64  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\ui\Section.tsx
+  36:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\ui\ThemeToggle.tsx
+  14:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\components\ui\ThemeToggle.tsx:14:9
+  12 |     // Avoid hydration mismatch
+  13 |     useEffect(() => {
+> 14 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |     }, []);
+  16 |
+  17 |     if (!mounted) {  react-hooks/set-state-in-effect
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\hooks\useReducedMotion.ts
+  10:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\hooks\useReducedMotion.ts:10:9
+   8 |     useEffect(() => {
+   9 |         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+> 10 |         setPrefersReducedMotion(mediaQuery.matches);
+     |         ^^^^^^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  11 |
+  12 |         const handleChange = (event: MediaQueryListEvent) => {
+  13 |             setPrefersReducedMotion(event.matches);  react-hooks/set-state-in-effect
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\blogPost.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\caseStudy.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\globalSettings.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\job.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\service.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\solution.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\teamMember.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\dell\.gemini\antigravity\scratch\fat-style-marketplace\src\sanity\schemas\testimonial.ts
+  1:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+Γ£û 127 problems (63 errors, 64 warnings)
+

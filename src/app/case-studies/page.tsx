@@ -16,7 +16,7 @@ async function getCaseStudies() {
         const caseStudies = await client.fetch(caseStudiesQuery);
         return caseStudies;
     } catch (error) {
-        console.warn('Failed to fetch case studies, using seed data:', error);
+        console.warn('Failed to fetch case studies from Sanity, using seed data.');
         return seedData.caseStudies;
     }
 }

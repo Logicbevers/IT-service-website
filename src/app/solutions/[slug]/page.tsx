@@ -7,7 +7,7 @@ import { buttonVariants } from '@/components/ui/Button';
 import { client, solutionBySlugQuery, solutionsQuery } from '@/lib/sanity';
 import seedData from '@/sanity/seed-content.json';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight, BarChart, ShieldCheck, Zap } from 'lucide-react';
+import { CheckCircle, BarChart, ShieldCheck, Zap } from 'lucide-react';
 import { Solution } from '@/types';
 
 interface Props {
@@ -18,9 +18,8 @@ async function getSolution(slug: string) {
     try {
         const solution = await client.fetch(solutionBySlugQuery, { slug });
         return solution;
-    } catch (error) {
-        console.warn('Failed to fetch solution, using seed data:', error);
-        // @ts-ignore
+    } catch {
+        console.warn('Failed to fetch solution from Sanity, using seed data.');
         return seedData.solutions.find((s: any) => s.slug.current === slug);
     }
 }
@@ -41,7 +40,7 @@ export async function generateStaticParams() {
         return solutions.map((solution: Solution) => ({
             slug: solution.slug.current,
         }));
-    } catch (error) {
+    } catch {
         return seedData.solutions.map((solution: any) => ({
             slug: solution.slug.current,
         }));

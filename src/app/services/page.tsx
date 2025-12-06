@@ -16,7 +16,7 @@ async function getServices() {
         const services = await client.fetch(servicesQuery);
         return services;
     } catch (error) {
-        console.warn('Failed to fetch services, using seed data:', error);
+        console.warn('Failed to fetch services from Sanity, using seed data.');
         return seedData.services;
     }
 }

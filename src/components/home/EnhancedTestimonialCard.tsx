@@ -49,7 +49,7 @@ export function EnhancedTestimonialCard({ name, role, company, content, rating, 
 
                 {/* Content */}
                 <p className="text-[#4A4A4A] leading-relaxed mb-6 relative z-10 italic">
-                    "{content}"
+                    &quot;{content}&quot;
                 </p>
 
                 {/* Client Info */}

@@ -18,7 +18,7 @@ async function getPost(slug: string) {
         const post = await client.fetch(blogPostBySlugQuery, { slug });
         return post;
     } catch (error) {
-        console.warn('Failed to fetch post, using seed data:', error);
+        console.warn('Failed to fetch post from Sanity, using seed data.');
         return seedData.blogPosts.find((p: any) => p.slug.current === slug);
     }
 }

@@ -45,7 +45,7 @@ export function ContactForm() {
                         </motion.div>
                         <h3 className="text-2xl font-bold mb-3 text-foreground">Message Sent!</h3>
                         <p className="text-muted-foreground mb-8 max-w-xs mx-auto">
-                            Thank you for reaching out. We'll get back to you shortly.
+                            Thank you for reaching out. We&apos;ll get back to you shortly.
                         </p>
                         <Button onClick={() => setIsSuccess(false)} variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
                             Send Another Message

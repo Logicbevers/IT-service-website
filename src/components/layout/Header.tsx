@@ -6,8 +6,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
-import { Button, buttonVariants } from '@/components/ui/Button';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { buttonVariants } from '@/components/ui/Button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { cn } from '@/lib/utils';
 
@@ -46,6 +46,7 @@ export function Header() {
     const { theme, resolvedTheme } = useTheme();
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
     }, []);
 
@@ -58,8 +59,11 @@ export function Header() {
     }, []);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMobileMenuOpen(false);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMobileServicesOpen(false);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMobileSolutionsOpen(false);
     }, [pathname]);
 

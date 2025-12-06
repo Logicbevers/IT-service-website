@@ -13,7 +13,7 @@ async function getPosts() {
         const posts = await client.fetch(blogPostsQuery);
         return posts;
     } catch (error) {
-        console.warn('Failed to fetch posts, using seed data:', error);
+        console.warn('Failed to fetch posts from Sanity, using seed data.');
         return seedData.blogPosts;
     }
 }

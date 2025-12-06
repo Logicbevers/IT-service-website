@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import { ArrowRight, Download, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 export function ConversionCTA() {
@@ -39,7 +39,7 @@ export function ConversionCTA() {
                         Ready to Transform Your Business?
                     </h2>
                     <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed">
-                        Let's discuss how NRT Groups can help you achieve your goals with tailored solutions designed for your success.
+                        Let&apos;s discuss how NRT Groups can help you achieve your goals with tailored solutions designed for your success.
                     </p>
 
                     {/* CTA Buttons */}

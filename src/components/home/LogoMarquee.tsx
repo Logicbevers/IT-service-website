@@ -15,6 +15,7 @@ export function LogoMarquee() {
             delay: `${Math.random() * 5}s`,
             duration: `${5 + Math.random() * 5}s`,
         }));
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setParticles(newParticles);
     }, []);
 

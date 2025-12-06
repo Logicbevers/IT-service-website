@@ -18,7 +18,7 @@ async function getCaseStudy(slug: string) {
         const study = await client.fetch(caseStudyBySlugQuery, { slug });
         return study;
     } catch (error) {
-        console.warn('Failed to fetch case study, using seed data:', error);
+        console.warn('Failed to fetch case study from Sanity, using seed data.');
         return seedData.caseStudies.find((s: any) => s.slug.current === slug);
     }
 }

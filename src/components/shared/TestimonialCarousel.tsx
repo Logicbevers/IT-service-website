@@ -98,7 +98,7 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.4 }}
                                 >
-                                    "{currentTestimonial.quote}"
+                                    &quot;{currentTestimonial.quote}&quot;
                                 </motion.p>
 
                                 {/* Author Info */}

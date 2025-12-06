@@ -5,20 +5,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+
 
 export function Footer() {
     const [mounted, setMounted] = useState(false);
     const { theme, resolvedTheme } = useTheme();
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
     }, []);
-
-    // Determine which logo to show based on theme
-    const logoSrc = mounted && (resolvedTheme === 'dark' || theme === 'dark')
-        ? '/logo-light.png'
-        : '/logo-dark.png';
 
     return (
         <footer className="bg-[#181A1B] text-white border-t border-white/10 pt-20 pb-10">

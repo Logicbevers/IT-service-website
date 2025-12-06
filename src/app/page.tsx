@@ -10,16 +10,9 @@ import { ConversionCTA } from '@/components/home/ConversionCTA';
 import { MetricsSection } from '@/components/home/MetricsSection';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
-import { ServiceCard } from '@/components/shared/ServiceCard';
-import { CaseStudyCard } from '@/components/shared/CaseStudyCard';
-import { TestimonialCarousel } from '@/components/shared/TestimonialCarousel';
 import { FloatingCTA } from '@/components/shared/FloatingCTA';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { client, servicesQuery, caseStudiesQuery, testimonialsQuery } from '@/lib/sanity';
-import { Button, buttonVariants } from '@/components/ui/Button';
-import Link from 'next/link';
-import { ArrowRight, Sparkles } from 'lucide-react';
-import { Service, CaseStudy, Testimonial } from '@/types';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -42,7 +35,7 @@ async function getData() {
     const caseStudies = await client.fetch(caseStudiesQuery);
     const testimonials = await client.fetch(testimonialsQuery);
     return { services, caseStudies, testimonials };
-  } catch (error) {
+  } catch {
     // Silently fall back to seed data if Sanity is not configured
     return {
       services: seedData.services,
@@ -53,7 +46,7 @@ async function getData() {
 }
 
 export default async function Home() {
-  const { services, caseStudies, testimonials } = await getData();
+  await getData();
 
   return (
     <div className="flex flex-col gap-0 relative">
@@ -81,7 +74,7 @@ export default async function Home() {
             At NRT Groups, our mission is to empower businesses with smarter operations by combining cutting-edge technology, logistics expertise, and customer-centric solutions. We believe in making complex processes simple, transparent, and efficient—helping companies deliver more value to their customers while reducing operational stress.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            We're a team of problem-solvers committed to transforming logistics, IT, and customer support services into seamless, technology-driven solutions for businesses worldwide.
+            We&apos;re a team of problem-solvers committed to transforming logistics, IT, and customer support services into seamless, technology-driven solutions for businesses worldwide.
           </p>
         </div>
         <SectionDivider type="wave" position="bottom" fill="#23272F" />

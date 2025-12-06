@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Heading } from '@/components/ui/Heading';
-import { Home, ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 export default function NotFound() {
     return (
@@ -15,7 +15,7 @@ export default function NotFound() {
             </div>
 
             <p className="text-xl text-muted-foreground max-w-md mb-8">
-                Oops! The page you're looking for seems to have wandered off into the digital void.
+                Oops! The page you&apos;re looking for seems to have wandered off into the digital void.
             </p>
 
             <div className="flex gap-4">
