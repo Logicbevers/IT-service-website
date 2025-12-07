@@ -17,7 +17,7 @@ export function ContactForm() {
         await new Promise((resolve) => setTimeout(resolve, 1500));
 
         // In a real app, we would send data to /api/leads
-        console.log('Form submitted successfully');
+
 
         setIsLoading(false);
         setIsSuccess(true);
