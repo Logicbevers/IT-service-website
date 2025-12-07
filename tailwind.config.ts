@@ -10,41 +10,50 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: {
-                    DEFAULT: '#F6A400', // Primary Orange
-                    light: '#FCD9A0',   // Light Gold/Peach
-                    dark: '#E98000',    // Deep Amber
-                    foreground: '#1E1E1E',
-                },
-                accent: {
-                    DEFAULT: '#F6A400',
-                    hover: '#FFBA27',   // Hover Orange
-                    pressed: '#D86E00', // Pressed Orange
-                    light: '#FFEBD2',   // Soft Peach
-                    foreground: '#1E1E1E',
-                },
-                neutral: {
-                    dark: '#1E1E1E',    // Text Dark
-                    grey: '#4A4A4A',    // Text Grey
-                    light: '#FAFAFA',   // Light Background
-                    border: '#E6E6E6',  // Border Light
-                },
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
+                primary: {
+                    DEFAULT: 'var(--primary)',
+                    light: 'var(--primary-light)',
+                    dark: 'var(--primary-dark)',
+                    foreground: 'var(--primary-foreground)',
+                },
+                secondary: {
+                    DEFAULT: 'var(--secondary)',
+                    foreground: 'var(--secondary-foreground)',
+                },
+                accent: {
+                    DEFAULT: 'var(--accent)',
+                    hover: 'var(--accent-hover)',
+                    pressed: 'var(--accent-pressed)',
+                    light: 'var(--secondary)',
+                    foreground: 'var(--accent-foreground)',
+                },
+                destructive: {
+                    DEFAULT: 'var(--destructive)',
+                    foreground: 'var(--destructive-foreground)',
+                },
+                muted: {
+                    DEFAULT: 'var(--muted)',
+                    foreground: 'var(--muted-foreground)',
+                },
                 card: {
-                    DEFAULT: '#FFFFFF',
-                    foreground: '#1E1E1E',
+                    DEFAULT: 'var(--card)',
+                    foreground: 'var(--card-foreground)',
                 },
                 popover: {
                     DEFAULT: 'var(--popover)',
                     foreground: 'var(--popover-foreground)',
                 },
-                muted: {
-                    DEFAULT: '#FAFAFA',
-                    foreground: '#4A4A4A',
+                border: 'var(--border)',
+                input: 'var(--input)',
+                ring: 'var(--ring)',
+                neutral: {
+                    dark: 'var(--foreground)',
+                    grey: 'var(--muted-foreground)',
+                    light: 'var(--muted)',
+                    border: 'var(--border)',
                 },
-                input: '#E6E6E6',
-                ring: '#F6A400',
             },
             borderRadius: {
                 lg: 'var(--radius)',
