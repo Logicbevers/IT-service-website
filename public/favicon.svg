@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#1E1E1E"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F6A400;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E98000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- N Letter -->
+  <path d="M18 44V20H24L24 32.5L36 20H42V44H36V31.5L24 44H18Z" fill="url(#orangeGradient)"/>
+  
+  <!-- Accent dot -->
+  <circle cx="46" cy="24" r="3" fill="#F6A400"/>
+</svg>

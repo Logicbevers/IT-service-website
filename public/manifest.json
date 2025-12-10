@@ -1,0 +1,27 @@
+{
+    "name": "NRT Groups - Building the Future of Business & Innovation",
+    "short_name": "NRT Groups",
+    "description": "Empowering organizations with integrated solutions in technology, logistics, digital transformation, and skill development.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1E1E1E",
+    "theme_color": "#F6A400",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon?size=192",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon?size=512",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

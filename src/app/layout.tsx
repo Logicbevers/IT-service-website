@@ -10,35 +10,44 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Premium IT Services & Consulting',
-    template: '%s | Premium IT Services',
+    default: 'NRT Groups - Building the Future of Business & Innovation',
+    template: '%s | NRT Groups',
   },
-  description: 'Leading IT consulting and digital transformation partner. We help businesses innovate and grow with cutting-edge technology solutions.',
-  keywords: ['IT Services', 'Consulting', 'Digital Transformation', 'Cloud Migration', 'Cybersecurity', 'Software Development'],
-  authors: [{ name: 'Premium IT Services' }],
-  creator: 'Premium IT Services',
+  description: 'Empowering organizations with integrated solutions in technology, logistics, digital transformation, and skill development. 500+ projects delivered, 50+ global clients, 15+ years of excellence.',
+  keywords: ['IT Services', 'Logistics', 'Digital Transformation', 'Software Development', 'Training', 'Enterprise Solutions', 'Supply Chain', 'Customer Experience'],
+  authors: [{ name: 'NRT Groups' }],
+  creator: 'NRT Groups',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-icon', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.premiumit.com',
-    siteName: 'Premium IT Services',
-    title: 'Premium IT Services & Consulting',
-    description: 'Leading IT consulting and digital transformation partner.',
+    url: 'https://www.nrtgroups.com',
+    siteName: 'NRT Groups',
+    title: 'NRT Groups - Building the Future of Business & Innovation',
+    description: 'Empowering organizations with integrated solutions in technology, logistics, digital transformation, and skill development.',
     images: [
       {
-        url: 'https://www.premiumit.com/og-image.jpg', // Placeholder
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Premium IT Services',
+        alt: 'NRT Groups',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Premium IT Services & Consulting',
-    description: 'Leading IT consulting and digital transformation partner.',
-    images: ['https://www.premiumit.com/og-image.jpg'], // Placeholder
-    creator: '@premiumit',
+    title: 'NRT Groups - Building the Future of Business & Innovation',
+    description: 'Empowering organizations with integrated solutions in technology, logistics, digital transformation, and skill development.',
+    images: ['/og-image.jpg'],
+    creator: '@nrtgroups',
   },
   robots: {
     index: true,
