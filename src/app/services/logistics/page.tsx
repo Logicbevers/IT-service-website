@@ -83,7 +83,7 @@ export default function LogisticsPage() {
             </Section>
 
             {/* Benefits Section */}
-            <Section className="bg-white overflow-hidden" animate>
+            <Section className="bg-background overflow-hidden" animate>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="relative">
                         <div className="absolute -left-20 -top-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
@@ -101,7 +101,7 @@ export default function LogisticsPage() {
                                     className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-transparent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 group animate-slide-in-left"
                                     style={{ animationDelay: `${idx * 100}ms` }}
                                 >
-                                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                                    <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
                                         <CheckCircle className="text-accent h-5 w-5" />
                                     </div>
                                     <span className="text-lg font-medium group-hover:text-accent-dark transition-colors">{benefit}</span>
@@ -156,7 +156,7 @@ export default function LogisticsPage() {
                         ].map((reason, idx) => (
                             <div
                                 key={idx}
-                                className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-border shadow-sm hover:shadow-md hover:border-accent/50 hover:-translate-y-1 transition-all duration-300 cursor-default animate-scale-in"
+                                className="flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-border shadow-sm hover:shadow-md hover:border-accent/50 hover:-translate-y-1 transition-all duration-300 cursor-default animate-scale-in"
                                 style={{ animationDelay: `${idx * 50}ms` }}
                             >
                                 <CheckCircle className="text-accent h-4 w-4" />

@@ -15,7 +15,7 @@ export default function RetailSolutionsPage() {
             />
 
             {/* Overview Section */}
-            <Section className="bg-white py-24">
+            <Section className="bg-background py-24">
                 <div className="max-w-4xl mx-auto">
                     <Heading level={2} className="mb-6">Reimagining Retail for the Digital Age</Heading>
                     <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -25,7 +25,7 @@ export default function RetailSolutionsPage() {
             </Section>
 
             {/* Key Solutions */}
-            <Section className="bg-[#FAFAFA] py-24">
+            <Section className="bg-muted/30 py-24">
                 <div className="max-w-6xl mx-auto">
                     <Heading level={2} className="text-center mb-16">Our Retail Solutions</Heading>
 
@@ -64,7 +64,7 @@ export default function RetailSolutionsPage() {
                         ].map((solution, index) => {
                             const Icon = solution.icon;
                             return (
-                                <div key={index} className="bg-white p-8 rounded-2xl border border-[#E6E6E6] hover:shadow-xl transition-all">
+                                <div key={index} className="bg-card p-8 rounded-2xl border border-border hover:shadow-xl transition-all">
                                     <div className="w-16 h-16 bg-[#F6A400]/10 rounded-xl flex items-center justify-center mb-6">
                                         <Icon className="w-8 h-8 text-[#F6A400]" />
                                     </div>
@@ -78,7 +78,7 @@ export default function RetailSolutionsPage() {
             </Section>
 
             {/* CTA Section */}
-            <Section className="bg-white py-24">
+            <Section className="bg-background py-24">
                 <div className="max-w-4xl mx-auto text-center">
                     <Heading level={2} className="mb-6">Ready to Grow Your Retail Business?</Heading>
                     <p className="text-lg text-muted-foreground mb-8">

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { TechIcons } from '@/components/icons/TechIcons';
 
 export function TechnologyStack() {
     const [activeTab, setActiveTab] = useState('frontend');
@@ -76,8 +77,8 @@ export function TechnologyStack() {
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`px-6 py-3 rounded-full font-semibold transition-all ${activeTab === tab.id
-                                    ? 'bg-gradient-to-r from-[#F6A400] to-[#E98000] text-white shadow-lg'
-                                    : 'bg-white/10 text-white/70 hover:bg-white/20'
+                                ? 'bg-gradient-to-r from-[#F6A400] to-[#E98000] text-white shadow-lg'
+                                : 'bg-white/10 text-white/70 hover:bg-white/20'
                                 }`}
                         >
                             {tab.label}
@@ -93,22 +94,27 @@ export function TechnologyStack() {
                     transition={{ duration: 0.3 }}
                     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto"
                 >
-                    {technologies[activeTab as keyof typeof technologies].map((tech, index) => (
-                        <motion.div
-                            key={tech.name}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3, delay: index * 0.05 }}
-                            className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/10 transition-all cursor-pointer border border-white/10 hover:border-[#F6A400]"
-                        >
-                            <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-br from-[#F6A400]/20 to-[#E98000]/20 flex items-center justify-center text-3xl font-bold text-[#F6A400]">
-                                {tech.name.charAt(0)}
-                            </div>
-                            <div className="font-bold text-white mb-1">{tech.name}</div>
-                            <div className="text-xs text-white/60">{tech.category}</div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                    {technologies[activeTab as keyof typeof technologies].map((tech, index) => {
+                        const IconComponent = TechIcons[tech.name as keyof typeof TechIcons];
+
+                        return (
+                            <motion.div
+                                key={tech.name}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.3, delay: index * 0.05 }}
+                                className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/10 transition-all cursor-pointer border border-white/10 hover:border-[#F6A400]"
+                            >
+                                <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-br from-[#F6A400]/20 to-[#E98000]/20 flex items-center justify-center p-3 text-[#F6A400] group-hover:scale-110 transition-transform">
+                                    {IconComponent ? <IconComponent /> : (
+                                        <span className="text-3xl font-bold">{tech.name.charAt(0)}</span>
+                                    )}
+                                </div>
+                                <div className="font-bold text-white mb-1">{tech.name}</div>
+                                <div className="text-xs text-white/60">{tech.category}</div>
+                            </motion.div>
+                        );
+                    })}    </motion.div>
             </div>
         </section>
     );
